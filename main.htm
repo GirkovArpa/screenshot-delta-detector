@@ -1,0 +1,77 @@
+<html window-frame="transparent" window-resizable="false">
+
+  <head>
+    <meta charset="UTF=8">
+    <script src="main.js" type="module"></script>
+    <style>
+      html {
+        background: transparent;
+        width: 200px;
+        height: 220px;
+        overflow: hidden;
+      }
+
+      body {
+        overflow: hidden;
+        margin: 0;
+        width: 200px;
+        height: 220px;
+        flow: vertical;
+        box-sizing: border-box;
+        border: 1px dashed red;
+      }
+
+      .snapshot {
+        width: 200px;
+        height: 200px;
+        border: 1px dashed yellow;
+        box-sizing: border-box;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+        opacity: 0;
+      }
+
+      .caption {
+        height: 20px;
+        width: 200px;
+        background-color: red;
+        flex: horizontal;
+        color: white;
+        white-space: nowrap;
+
+      }
+
+      .about,
+      .close {
+        cursor: pointer;
+        width: 15px;
+        height: 20px;
+        box-sizing: border-box;
+        position: relative;
+        background: red;
+        float: right;
+        transform: translate(0, -20px);
+      }
+
+      [role=window-caption] {
+        vertical-align: middle;
+        line-height: 0.75em;
+        font-size: 0.75em;
+        text-align: center;
+        height: 20px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div .caption>
+      <div role="window-caption">Monitoring for changes ...</div>
+      <div .close>×</div>
+      <div .about>&#128712;</div>
+    </div>
+    <div .snapshot></div>
+
+  </body>
+
+</html>
